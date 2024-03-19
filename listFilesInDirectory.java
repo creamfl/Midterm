@@ -7,11 +7,12 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        Path dir = Paths.get("C:\\User\\Desktop");
+        Path dir = Paths.get("path/to/directory");
+        Path path = Paths.get("path/to/directory/log.txt");
         try (Stream<Path> stream = Files.list(dir)) {
             stream.forEach(System.out::println);
             String content = Files.list(dir).toString();
-            Files.write(dir, content.getBytes(StandardCharsets.UTF_8));
+            Files.write(path, content.getBytes(StandardCharsets.UTF_8));
             System.out.println("File created successfully.");
         } catch (IOException e) {
             e.printStackTrace();
