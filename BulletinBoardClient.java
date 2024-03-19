@@ -8,10 +8,10 @@ public class BulletinBoardClient {
 
     public static void main(String[] args) {
         try (
-            Socket socket = new Socket(SERVER_ADDRESS, PORT);
-            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            Scanner scanner = new Scanner(System.in)
+                Socket socket = new Socket(SERVER_ADDRESS, PORT);
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+                BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                Scanner scanner = new Scanner(System.in)
         ) {
             String userInput;
             while (true) {
