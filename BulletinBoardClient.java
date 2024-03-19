@@ -15,15 +15,15 @@ public class BulletinBoardClient {
         ) {
             String userInput;
             while (true) {
-                System.out.println("Enter '1' to read messages, '2' to post a message, or 'QUIT' to exit:");
+                System.out.println("Enter 'read' to read messages, 'write' to post a message, or 'QUIT' to exit:");
                 userInput = scanner.nextLine();
-                if ("1".equals(userInput)) {
+                if ("read".equals(userInput)) {
                     out.println("READ_MESSAGES");
                     String response;
                     while (!(response = in.readLine()).equals("EOF")) {
                         System.out.println(response);
                     }
-                } else if ("2".equals(userInput)) {
+                } else if ("write".equals(userInput)) {
                     System.out.println("Enter your message:");
                     String message = scanner.nextLine();
                     out.println("POST_MESSAGE:" + message);
